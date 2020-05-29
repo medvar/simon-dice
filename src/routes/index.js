@@ -36,8 +36,8 @@ module.exports = (app, uuid, DB, Request, access) => {
             resul
         });
     });
-    app.post('/fingame', acceso, (req, res, next) => {
-        res.render('home', { user: req.session.user });
+    app.post('/fingame', acceso, acceso, (req, res, next) => {
+        res.redirect('home', { user: req.session.user });
     });
     const simondice = ["casa", "lapiz", "tv", "teclado", "silla", "pc", "mouse", "mesa", "manzana", "control"]
     app.get('/play', (req, res, next) => {

@@ -1,0 +1,39 @@
+<% title="Login | Simon Dice" %>
+    <% include partials/header %>
+        <div class="container-fluid ">
+            <div class="row " style="margin-top: 10px; ">
+                <div class="col-12">
+                    <svg style="height: 50px; background-color: #111;" class=textanimate viewBox="0 0 600 100"><!-- Symbol--><symbol id="s-text"><text text-anchor="middle" x="50%" y="50%" dy=".35em">simon dice</text></symbol><!-- Duplicate symbols--><use class="text" xlink:href="#s-text"></use><use class="text" xlink:href="#s-text"></use><use class="text" xlink:href="#s-text"></use><use class="text" xlink:href="#s-text"></use><use class="text" xlink:href="#s-text"></use></svg>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-1">
+            <div class="row text-center">
+                <form id='formLogin' class="col-md-12" method="POST" action="access">
+                    <div class="form-group col-12 col-md-6">
+                        <label for="usuario">Usuario</label>
+                        <input type="text" class="form-control" id="user" name="user" aria-describedby="usuario">
+                    </div>
+                    <div class="form-group col-12 col-md-6">
+                        <label for="contra">Contrase;a</label>
+                        <input type="password" class="form-control" id="pass" name="pass" aria-describedby="contra">
+                    </div>
+                    <div class="row">
+                        <h5 id="ErorMensaje" style="color: red;">
+                            <%=resul%>
+                        </h5>
+                    </div>
+                    <input type="submit" value="Conectar" class="btn btn-lg btn-success col-12 col-md-3">
+                </form>
+
+                <a class="col-12 col-md-6" href="index.html">Se te olvidó tu contraseña?</a>
+                <div class="col-12 mt-1">
+
+                    <div class="row justify-content-start mb-1">
+                        <a href="/singup" class="btn btn-outline-danger col-12 col-md-3">Crear Cuenta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% include partials/foo %>
+            <% include partials/footer %>

@@ -144,7 +144,7 @@
                         } else
                             setTimeout(clic, 1000)
 
-                        document.getElementById("rondass").innerHTML = ronda
+                        document.getElementById("rondass").innerHTML = "ronda:" + ronda
                     }
 
                 } else
@@ -188,12 +188,12 @@
                 if (simondijo.innerText.toLowerCase() == prediction[index].className.toLowerCase()) {
                     result.innerHTML = "YOU WIN, " + prediction[index].probability
                     puntos++
-                    document.getElementById("puntoss").innerHTML = puntos
+                    document.getElementById("puntoss").innerHTML = "puntos: " + puntos
                     if (ronda == rondasnum)
                         setTimeout(clic, 1000)
                     else {
                         ronda++
-                        document.getElementById("rondass").innerHTML = ronda
+                        document.getElementById("rondass").innerHTML = "ronda: " + ronda
                         newronda()
                     }
 

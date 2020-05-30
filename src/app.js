@@ -33,7 +33,7 @@ app.use(bodyParser.json());
 
 app.use(cors({
     credentials: false,
-    origin: 'http://localhost:5500'
+    origin: '*'
 }));
 
 //static
@@ -46,8 +46,10 @@ app.use(express.urlencoded({
 }));
 
 
+
 //routes
 require('./routes/index')(app, uuid, DB, Request);
+
 
 // 404 handler
 app.use((req, res, next) => {

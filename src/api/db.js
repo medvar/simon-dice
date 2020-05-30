@@ -9,7 +9,7 @@ const findObject = (table, id, col = "id", list = false) => {
             result.push(row);
         }
     });
-    console.log(result)
+    // console.log(result)
 
     if (result.length == 1) {
         if (list)

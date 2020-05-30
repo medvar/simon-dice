@@ -14,11 +14,37 @@
         </div>
         <div class="container">
             <div class="row text-center mt-5">
+                <input type="hidden" name="user" id="userid" value="<%=user%>">
                 <div class="col-12 mb-5">
                     <a href="/play" class="btn btn-lg btn-success">Jugar!!!</a>
+                </div>
+                <div class="col-12 mb-5">
+                    <a href="/aboutus" class="btn btn-lg btn-info">Nosotros</a>
+                </div>
+                <div class="col-12 mb-5">
+                    <a href="/aboutproyect" class="btn btn-lg btn-primary">El proyecto</a>
                 </div>
             </div>
         </div>
 
+        <!--<script src="/socket.io/socket.io.js"></script>
+        <script>
+            const socket = io();
+
+            socket.emit("sethome", document.getElementById("userid").value)
+            socket.on('newgame:data', function(data) {
+
+                console.log(data)
+                $("#modal").modal()
+            });
+
+            function hola() {
+                socket.emit("gamesala1", document.getElementById("userid").value)
+            }
+            socket.on('login:data', function(data) {
+
+            });
+        </script>
+    -->
         <% include partials/foo %>
             <% include partials/footer %>
